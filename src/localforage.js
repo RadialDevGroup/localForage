@@ -87,7 +87,7 @@ class LocalForage {
             if (DriverType.hasOwnProperty(driverTypeKey)) {
                 this[driverTypeKey] = DriverType[driverTypeKey];
 
-                if (!DefinedDrivers[driverTypeKey]) {
+                if (!DefinedDrivers[DriverType[driverTypeKey]]) {
                     // we don't need to wait for the promise,
                     // since the default drivers can be defined
                     // in a blocking manner

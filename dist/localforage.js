@@ -1,6 +1,6 @@
 /*!
     localForage -- Offline Storage, Improved
-    Version 1.5.0
+    Version 1.5.1
     https://localforage.github.io/localForage
     (c) 2013-2017 Mozilla, Apache License 2.0
 */
@@ -2130,7 +2130,7 @@ var LocalForage = function () {
             if (DriverType.hasOwnProperty(driverTypeKey)) {
                 this[driverTypeKey] = DriverType[driverTypeKey];
 
-                if (!DefinedDrivers[driverTypeKey]) {
+                if (!DefinedDrivers[DriverType[driverTypeKey]]) {
                     // we don't need to wait for the promise,
                     // since the default drivers can be defined
                     // in a blocking manner
